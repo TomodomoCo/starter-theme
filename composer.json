@@ -1,0 +1,62 @@
+{
+  "name": "tomodomo/starter-theme",
+  "description": "WordPress starter theme",
+  "type": "wordpress-theme",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Tomodomo",
+      "email": "hello@tomodomo.co"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/tomodomoco/kaiso"
+    },
+    {
+      "type": "vcs",
+      "url": "https://github.com/tomodomoco/wp-asset-registrar"
+    }
+  ],
+  "config": {
+    "vendor-dir": "build/composer",
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "installer-name": "tf"
+  },
+  "autoload": {
+    "psr-4": {
+      "Tomodomo\\Theme\\Controllers\\": [
+        "src/controllers/"
+      ],
+      "Tomodomo\\Theme\\Helpers\\": [
+        "src/helpers/"
+      ],
+      "Tomodomo\\Theme\\Models\\": [
+        "src/models/"
+      ],
+      "Tomodomo\\Theme\\Widgets\\": [
+        "src/widgets/"
+      ]
+    }
+  },
+  "require": {
+    "php": "^7.1",
+    "nesbot/carbon": "^2.7",
+    "timber/timber": "^1.7",
+    "tomodomo/kaiso": "dev-master",
+    "tomodomo/twig-pluralize-extension": "^2.0",
+    "tomodomo/wp-asset-registrar": "dev-master"
+  },
+  "require-dev": {
+    "dealerdirect/phpcodesniffer-composer-installer": "^0.5.0",
+    "giacocorsiglia/wordpress-stubs": "^4.9",
+    "sirbrillig/phpcs-variable-analysis": "^2.1",
+    "vimeo/psalm": "^2.0",
+    "wimg/php-compatibility": "^9.0"
+  }
+}
